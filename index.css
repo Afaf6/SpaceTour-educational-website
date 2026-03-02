@@ -1,0 +1,403 @@
+/*  Reset  */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+/*  Global  */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #0b0d17;
+  color: #ffffff;
+  line-height: 1.6;
+}
+
+#home{
+  background-image: url(IMG/plants.png);
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+section {
+  padding: 80px 8%;
+}
+
+/*  Navbar  */
+header {
+  background-color: rgba(11, 13, 23, 0.9);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 8%;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  position: relative;
+  padding-bottom: 5px;
+  transition: 0.3s;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: #ffffff;
+  left: 0;
+  bottom: 0;
+  transition: 0.3s;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/*  Hero Section */
+.hero {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(
+      rgba(11, 13, 23, 0.6),
+      rgba(11, 13, 23, 0.6)
+    ),
+    url("../images/hero-bg.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-text {
+  max-width: 500px;
+}
+
+.hero-text h1 {
+  font-size: 48px;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+}
+
+.hero-text p {
+  font-size: large;
+  color: white;
+  margin-bottom: 30px;
+}
+
+/*  About Section */
+#about{
+  background: url(IMG/Stars.png);
+  color: white;
+
+}
+.about {
+  text-align: center;
+}
+
+.about p {
+  max-width: 700px;
+  margin: 20px auto 0;
+  color: white;
+}
+
+/* Astronauts */
+
+.astronauts{
+  padding: 60px 20px;
+  text-align: center;
+  color: rgb(226, 245, 155);
+  background: #050816 url(IMG/Stars.png);
+  background-size: cover;
+  gap: 40px;
+}
+.astronauts_container{
+   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  margin: 20px;
+}
+
+.astro-card{
+  width: 280px;
+  position: relative;
+  border-radius: 15px;
+}
+
+
+.astro-card input{
+  display: none;
+}
+
+.astro-card label{
+  display: block;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 15px;
+  transition: 0.4s;
+}
+
+
+.astro-card img{
+  width: 100%;         
+  display: block;
+  border-radius: 15px;
+  transition: transform .8s;
+}
+
+
+.astro-info{
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.8);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  opacity: 0;
+  transform: translateY(25%);
+  transition: all 0.5s ease;
+}
+
+
+.astro-card input:checked + label .astro-info{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+.astro-card input:checked + label img{
+  transform: scale(1.1);
+  height: 80vh;
+}
+
+.astronauts h2{
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.astro-card p{
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.astro-card p{
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+
+
+/*  Destinations  */
+.destinations {
+  text-align: center;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 50px;
+}
+
+.card img {
+  width: 180px;
+  margin: 0 auto 20px;
+  filter: drop-shadow(0 0 25px rgba(255, 255, 255, 0.6));
+  transition: 0.4s;
+}
+
+.card:hover img {
+  transform: scale(1.1);
+}
+
+.card h3 {
+  letter-spacing: 2px;
+}
+.asking {
+  width: 70%;
+}
+.asking h2, p, a{
+  padding: 20px;
+}
+
+/* Contact  */
+.title{
+  text-align:center;
+  margin:0;
+  font-size:40px;
+  letter-spacing:1px;
+  font-weight:700;
+  color: #333;
+}
+.contact-section{
+  max-width:1200px;
+  margin:36px auto;
+  display:flex;
+  gap:40px;
+  align-items:flex-start;
+  justify-content:space-between;
+  padding:0 24px 80px;
+}
+.contact-card{
+  flex:1 1 560px;
+  min-width:280px;
+}
+.card-inner{
+  width: 60%;
+  padding:22px;
+  border-radius:6px;
+  border: 1px solid gray;
+  position:relative;
+}
+
+.contact-form{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+  width:100%;
+  align-items: center;
+}
+
+.form-input{
+  width:100%;
+  padding:12px 14px;
+  border-radius:6px;
+  border:1px solid #bfbfbf;
+  outline:none;
+  font-size:15px;
+  background-color: rgba(11, 13, 23, 0.9);
+}
+
+.form-textarea{
+  width:100%;
+  padding:12px 14px;
+  border-radius:6px;
+  border:1px solid #bfbfbf;
+  font-size:15px;
+}
+
+/*  Button  */
+.btn {
+  display:flex;
+  justify-content:flex-start;
+  padding: 14px 35px;
+  border: 2px solid #ffffff;
+  border-radius: 50px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: #f7f7f7;
+  color: #0b0d17;
+}
+.btn-send{
+  background:transparent;
+  color:#fff;
+  padding:10px 22px;
+  border-radius:24px;
+  border:none;
+  cursor:pointer;
+  font-weight:600;
+  font-size:14px;
+}
+.btn-send:hover{
+  color: #0b0d17;
+}
+.form-textarea{
+  width:100%;
+  padding:12px 14px;
+  border-radius:6px;
+  border:1px solid #bfbfbf;
+  font-size:15px;
+  background-color: rgba(11, 13, 23, 0.9);
+}
+
+
+/*  Footer  */
+
+footer{
+    display: flex;
+    flex-wrap: nowrap;
+    width: 80%;
+    padding: 10px;
+    margin: auto;
+    border-top: 1px grey solid;
+}
+.child1 h2{
+    font-weight: 400;
+}
+
+.parent div{
+    width: 70%; 
+    margin: 10px;
+}
+
+.contan{
+    display: flex;
+    align-items: center;
+}
+
+.text{
+    width: 50%;
+    font-size: medium;
+    position: relative;
+}
+
+
+/*  Responsive  */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .hero {
+    text-align: center;
+  }
+
+  .hero-text {
+    margin: auto;
+  }
+
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+  .asking{
+    width: 100%;
+  }
+  .card-inner{
+    width: 100%;
+  }
+  footer{
+    display: flex;
+    flex-wrap: wrap;
+  }
+}

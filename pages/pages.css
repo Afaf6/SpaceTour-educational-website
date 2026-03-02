@@ -1,0 +1,39 @@
+body {
+  font-family: 'Arial', sans-serif;
+  color: #f5dcdc;
+  line-height: 1.6;
+  background-color: black;
+  background-image: url(/IMG/Stars.png);
+}
+section{
+    display: flex;
+    flex: auto;
+    flex-wrap: wrap;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+    gap: 40px;
+}
+div{
+    font-size:large;
+    font-family: serif;
+}
+
+ img{
+    transition: 1s ease-out;
+}
+
+img:hover{
+     transform: scale(1.1);
+}
+a{
+    cursor: pointer;
+    list-style: none;
+}
+span{
+    color: rgb(229, 164, 235);
+}
+.nasa{
+    color: rgb(178, 211, 248);
+}
