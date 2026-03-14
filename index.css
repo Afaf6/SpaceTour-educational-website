@@ -39,7 +39,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 25px 8%;
+  padding: 25px;
 }
 
 .logo {
@@ -73,6 +73,16 @@ header {
 
 .nav-links a:hover::after {
   width: 100%;
+}
+.menu-icon{
+  font-size:28px;
+  color:white;
+  cursor:pointer;
+  display:none;
+}
+
+#menu-toggle{
+  display:none;
 }
 
 /*  Hero Section */
@@ -373,11 +383,32 @@ footer{
 
 /*  Responsive  */
 @media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    gap: 20px;
-  }
 
+.nav-links{
+  position:absolute;
+  top:70px;
+  left:0;
+  width:100%;
+  background:#050816;
+
+  flex-direction:column;
+  align-items:center;
+
+  max-height:0;
+  overflow:hidden;
+  transition:0.4s;
+}
+
+.menu-icon{
+  display:block;
+}
+
+
+#menu-toggle:checked + .menu-icon + .nav-links{
+  max-height:300px;
+}
+
+}
   .hero {
     text-align: center;
   }
@@ -400,4 +431,4 @@ footer{
     display: flex;
     flex-wrap: wrap;
   }
-}
+
